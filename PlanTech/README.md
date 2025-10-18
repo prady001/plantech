@@ -47,6 +47,7 @@ Acesse: **http://localhost:8080**
 | **Routing** | React Router v6 |
 | **State** | React Query, Context API |
 | **UI Components** | Radix UI Primitives |
+| **Animations** | Tailwind CSS animations, Custom CSS keyframes |
 
 ## Funcionalidades
 
@@ -56,6 +57,7 @@ Acesse: **http://localhost:8080**
 |----------------|-----------|--------|
 | **Dashboard** | Resumo visual com stats de plantões e ganhos | ✅ Completo |
 | **Marketplace** | Feed de vagas com filtros (local, especialidade, período) | ✅ Completo |
+| **Plantões de Destaque** | Carrossel com plantões urgentes e valores premium | ✅ Completo |
 | **Agenda** | Calendário unificado de plantões confirmados/pendentes | ✅ Completo |
 | **Finanças** | Controle manual de recebimentos com progress bar | ✅ Completo |
 | **Perfil** | Dados profissionais e upload de documentos | ✅ Completo |
@@ -130,37 +132,103 @@ npm run lint     # Executa ESLint
 
 ## Design Highlights
 
+### Animated Backgrounds
+Sistema de fundos multicamadas com profundidade:
+- **Gradientes compostos**: 3-4 camadas de gradientes sobrepostos
+- **Elementos decorativos**: Círculos flutuantes com blur (animate-float, animate-float-slow)
+- **Grid patterns**: Texturas sutis de fundo para adicionar detalhe
+- **Z-index layers**: Organização em camadas para profundidade visual
+
+### Glassmorphism
+Efeitos modernos de vidro e transparência:
+- **Backdrop blur**: `backdrop-blur-lg` em navegação e cards
+- **Transparências**: `bg-background/80` para efeito de vidro
+- **Bordas sutis**: `border-border/50` para delimitação suave
+- **Sombras intensas**: `shadow-2xl` para elevação visual
+
+### Horizontal Carousels
+Sistema completo de carrosséis com:
+- **Auto-play**: Transição automática a cada 4-5 segundos
+- **Navegação**: Setas e dots para controle manual
+- **Touch support**: Swipe otimizado para mobile
+- **Pause on hover**: Pausa automática ao passar o mouse
+- **Keyboard navigation**: Acessibilidade completa
+
+### Micro-interactions
+Animações e feedbacks visuais:
+- **Scale effects**: `hover:scale-105`, `hover:scale-110` em botões e cards
+- **Rotate animations**: `group-hover:rotate-12` em ícones
+- **Glow effects**: `animate-pulse-glow` para elementos premium
+- **Gradient shift**: `animate-gradient-shift` para textos destacados
+- **Transições suaves**: `transition-all duration-300` em todos elementos interativos
+
 ### Gradientes Premium
-Inspirado em plant-care-connect:
-- `bg-gradient-hero` - Multi-color para impacto
+Paleta expandida de gradientes:
+- `bg-gradient-hero` - Multi-color para impacto (primary → blue → secondary)
 - `bg-gradient-primary` - Azul médico confiável
 - `bg-gradient-success` - Verde para finanças positivas
+- `bg-gradient-premium` - Roxo/dourado para recursos premium
+- `bg-gradient-urgency` - Vermelho/laranja para plantões urgentes
 
-### Animações
-- `animate-fade-in` - Entrada suave de conteúdo
-- `animate-float` - Flutuação sutil
-- `hover:scale-105` - Hover interativo em CTAs
-- Transições suaves em todos os elementos
+### Mobile Optimizations
+Design responsivo mobile-first:
+- **Hamburger menu**: Menu animado com ícones X/Menu
+- **Navegação sempre visível**: Setas de carrossel visíveis em mobile
+- **Typography responsiva**: `text-2xl sm:text-3xl md:text-4xl lg:text-5xl`
+- **Touch-friendly**: Botões com tamanho mínimo 44px
+- **Spacing adaptativo**: `gap-3 sm:gap-4 md:gap-6` para melhor uso do espaço
+- **Bottom navigation**: Navegação inferior em mobile com ícones grandes
 
 ### Responsividade
 - Mobile-first design
 - Breakpoints: sm (640px), md (768px), lg (1024px)
 - Bottom navigation em mobile
 - Cards adaptativos
+- Logo responsivo (size="sm" mobile, size="md"/"lg" desktop)
+
+## Visual Identity
+
+### Custom Logo Integration
+Sistema completo de identidade visual:
+- **Logo Component**: Componente reutilizável com variações de tamanho
+- **LogoWithTagline**: Versão com tagline "Sistema Operacional para Saúde"
+- **LogoIcon**: Versão compacta para espaços reduzidos
+- **Favicon**: SVG customizado para navegadores
+
+### Theme Consistency
+Consistência visual em todas as páginas:
+- **Landing Page**: Gradientes multicamadas com elementos decorativos
+- **Auth Page**: Mesmo sistema de design para continuidade
+- **App Dashboard**: Backgrounds sutis para não distrair do conteúdo
+- **Navigation**: Backdrop blur consistente em todas as páginas
+
+### Dark Mode Support
+Suporte completo ao modo escuro:
+- **Theme Toggle**: Botão de alternância em todas as páginas
+- **Color Adaptation**: Todas as cores ajustadas para dark mode
+- **Contrast**: Garantia de legibilidade em ambos os modos
+- **Animations**: Cores de animações adaptadas ao tema
 
 ## Métricas do MVP
 
-- **Componentes React**: 23
-- **Linhas de código**: ~2.500
+- **Componentes React**: 25+
+- **Linhas de código**: ~3.500+
 - **Páginas**: 4 (Landing, Auth, App, 404)
-- **Bundle size estimado**: < 500kb
+- **Featured Shifts**: 5 plantões premium com valores R$ 2.800-5.000
+- **Carousels**: 4 carrosséis (Landing: 3, Marketplace: 1)
+- **Bundle size estimado**: < 600kb
 - **Lighthouse score esperado**: 95+
 
 ## Roadmap
 
 ### ✅ MVP (Atual)
-- Design system completo
-- 5 funcionalidades gratuitas
+- Design system completo com animações avançadas
+- 6 funcionalidades gratuitas (incluindo Featured Shifts)
+- 4 carrosséis horizontais auto-play
+- Sistema de gradientes multicamadas
+- Mobile-first com hamburger menu
+- Glassmorphism e micro-interações
+- Identidade visual customizada (logo + favicon)
 - Previews Premium
 - Documentação completa
 
