@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    --primary: 205 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 205 90% 65%;
+    --primary-dark: 205 85% 35%;
+
+    --secondary: 155 70% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 155 75% 65%;
+
+    --success: 155 70% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 205 100% 95%;
+    --accent-foreground: 205 85% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 205 85% 45%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(205, 85%, 45%) 0%, hsl(205, 85%, 35%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(155, 70%, 50%) 0%, hsl(155, 70%, 40%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(155, 70%, 50%) 0%, hsl(155, 70%, 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(205, 85%, 45%) 0%, hsl(205, 90%, 55%) 50%, hsl(155, 70%, 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(205, 100%, 98%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(210, 20%, 99%) 100%);
+    
+    --shadow-sm: 0 1px 2px 0 hsl(205 85% 45% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(205 85% 45% / 0.1), 0 2px 4px -2px hsl(205 85% 45% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(205 85% 45% / 0.1), 0 4px 6px -4px hsl(205 85% 45% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(205 85% 45% / 0.1), 0 8px 10px -6px hsl(205 85% 45% / 0.1);
+    --shadow-card: 0 2px 8px -2px rgb(0 0 0 / 0.08);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 210 30% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 210 25% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 210 25% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 205 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 205 90% 65%;
+    --primary-dark: 205 85% 45%;
+
+    --secondary: 155 70% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 155 75% 65%;
+
+    --success: 155 70% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 85% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --muted: 210 25% 16%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 210 25% 16%;
+    --accent-foreground: 205 85% 65%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 25% 20%;
+    --input: 210 25% 20%;
+    --ring: 205 85% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(205, 85%, 55%) 0%, hsl(205, 85%, 45%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(155, 70%, 50%) 0%, hsl(155, 70%, 40%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(155, 70%, 50%) 0%, hsl(155, 70%, 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(205, 85%, 55%) 0%, hsl(205, 90%, 65%) 50%, hsl(155, 70%, 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210, 30%, 8%) 0%, hsl(210, 25%, 12%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(210, 25%, 12%) 0%, hsl(210, 25%, 14%) 100%);
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -4px hsl(0 0% 0% / 0.4);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 8px 10px -6px hsl(0 0% 0% / 0.4);
+    --shadow-card: 0 4px 12px -2px rgb(0 0 0 / 0.4);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl lg:text-2xl;
+  }
+  
+  h5 {
+    @apply text-lg lg:text-xl;
+  }
+  
+  h6 {
+    @apply text-base lg:text-lg;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .text-medical {
+    @apply bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent;
+  }
+  
+  .text-success {
+    @apply bg-gradient-to-r from-success-500 to-success-700 bg-clip-text text-transparent;
+  }
+  
+  .text-warning {
+    @apply bg-gradient-to-r from-warning-500 to-warning-700 bg-clip-text text-transparent;
+  }
+  
+  .text-error {
+    @apply bg-gradient-to-r from-error-500 to-error-700 bg-clip-text text-transparent;
+  }
+}
+
+@layer components {
+  /* Custom component styles */
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .premium-glow {
+    @apply shadow-premium animate-pulse-glow;
+  }
+  
+  .medical-card {
+    @apply bg-gradient-medical border-primary/20 shadow-medical;
+  }
+  
+  .success-card {
+    @apply bg-gradient-success-soft border-success/20 shadow-success;
+  }
+  
+  .warning-card {
+    @apply bg-gradient-warning-soft border-warning/20 shadow-warning;
+  }
+  
+  .error-card {
+    @apply bg-gradient-error-soft border-error/20 shadow-error;
+  }
+  
+  .floating-card {
+    @apply shadow-float hover:shadow-xl transition-all duration-300;
+  }
+  
+  .shimmer-effect {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent;
+  }
+  
+  .hero-gradient {
+    @apply bg-gradient-hero;
+  }
+  
+  .medical-gradient {
+    @apply bg-gradient-medical;
+  }
+  
+  .success-gradient {
+    @apply bg-gradient-success-soft;
+  }
+  
+  .warning-gradient {
+    @apply bg-gradient-warning-soft;
+  }
+  
+  .error-gradient {
+    @apply bg-gradient-error-soft;
+  }
+  
+  .premium-gradient {
+    @apply bg-gradient-premium;
+  }
+  
+  .glass-gradient {
+    @apply bg-gradient-glass;
+  }
+}
+
